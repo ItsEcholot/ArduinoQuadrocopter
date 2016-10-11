@@ -304,7 +304,7 @@ void loop() {
 		motor3Power = power - pidRoll_Out - pidYaw_Out;
 
 		//If the throttle / power is lower then the safe shutdown value turn them off (this is here to prevent motors to accidentaly turning on due to noise in the receiver end (2.4 ghz spectrum))
-		//Also prevents motors to accidentaly turn when the quadrocopter is turned on it's and the pid controllers therefore calculate a very high correction Value
+		//Also prevents motors to accidentaly turn when the quadrocopter is turned on its side and the pid controllers therefore calculate a very high correction Value
 		if (power < POWERSAFESHUTDOWN) {
 			motor0Power = MOTOR_ZERO_VALUE;
 			motor1Power = MOTOR_ZERO_VALUE;
